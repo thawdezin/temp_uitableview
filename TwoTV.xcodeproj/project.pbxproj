@@ -13,6 +13,10 @@
 		CBC7C52D293CF52900AAC43A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBC7C52B293CF52900AAC43A /* Main.storyboard */; };
 		CBC7C52F293CF52A00AAC43A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBC7C52E293CF52A00AAC43A /* Assets.xcassets */; };
 		CBC7C532293CF52A00AAC43A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBC7C530293CF52A00AAC43A /* LaunchScreen.storyboard */; };
+		CBC7C53B293CFB7700AAC43A /* FirstTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC7C539293CFB7700AAC43A /* FirstTableViewCell.swift */; };
+		CBC7C53C293CFB7800AAC43A /* FirstTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBC7C53A293CFB7700AAC43A /* FirstTableViewCell.xib */; };
+		CBC7C53F293CFC1500AAC43A /* SecondTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC7C53D293CFC1500AAC43A /* SecondTableViewCell.swift */; };
+		CBC7C540293CFC1500AAC43A /* SecondTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBC7C53E293CFC1500AAC43A /* SecondTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		CBC7C52E293CF52A00AAC43A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CBC7C531293CF52A00AAC43A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CBC7C533293CF52A00AAC43A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBC7C539293CFB7700AAC43A /* FirstTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTableViewCell.swift; sourceTree = "<group>"; };
+		CBC7C53A293CFB7700AAC43A /* FirstTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstTableViewCell.xib; sourceTree = "<group>"; };
+		CBC7C53D293CFC1500AAC43A /* SecondTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTableViewCell.swift; sourceTree = "<group>"; };
+		CBC7C53E293CFC1500AAC43A /* SecondTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +71,10 @@
 				CBC7C52E293CF52A00AAC43A /* Assets.xcassets */,
 				CBC7C530293CF52A00AAC43A /* LaunchScreen.storyboard */,
 				CBC7C533293CF52A00AAC43A /* Info.plist */,
+				CBC7C539293CFB7700AAC43A /* FirstTableViewCell.swift */,
+				CBC7C53A293CFB7700AAC43A /* FirstTableViewCell.xib */,
+				CBC7C53D293CFC1500AAC43A /* SecondTableViewCell.swift */,
+				CBC7C53E293CFC1500AAC43A /* SecondTableViewCell.xib */,
 			);
 			path = TwoTV;
 			sourceTree = "<group>";
@@ -127,6 +139,8 @@
 			files = (
 				CBC7C532293CF52A00AAC43A /* LaunchScreen.storyboard in Resources */,
 				CBC7C52F293CF52A00AAC43A /* Assets.xcassets in Resources */,
+				CBC7C540293CFC1500AAC43A /* SecondTableViewCell.xib in Resources */,
+				CBC7C53C293CFB7800AAC43A /* FirstTableViewCell.xib in Resources */,
 				CBC7C52D293CF52900AAC43A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,7 +153,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBC7C52A293CF52900AAC43A /* ViewController.swift in Sources */,
+				CBC7C53F293CFC1500AAC43A /* SecondTableViewCell.swift in Sources */,
 				CBC7C526293CF52900AAC43A /* AppDelegate.swift in Sources */,
+				CBC7C53B293CFB7700AAC43A /* FirstTableViewCell.swift in Sources */,
 				CBC7C528293CF52900AAC43A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
