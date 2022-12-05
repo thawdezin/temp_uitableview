@@ -14,6 +14,9 @@ class FirstTableViewCell: UITableViewCell {
     @IBOutlet weak var heightSecondTV: NSLayoutConstraint!
     @IBOutlet weak var firstLbl: UILabel!
     
+    var count : Int = 12
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -22,37 +25,46 @@ class FirstTableViewCell: UITableViewCell {
         secondTV.register(UINib(nibName: "SecondTableViewCell", bundle: nil), forCellReuseIdentifier: "SecondTableViewCell")
         
         secondTV.rowHeight = UITableView.automaticDimension
-        secondTV.estimatedRowHeight = 12
-        
-//        DispatchQueue.main.async {
-//            
-//            self.secondTV.reloadData()
-//            
-//            self.secondTV.setNeedsLayout()
-//            self.secondTV.layoutIfNeeded()
-//            
-//            self.secondTV.reloadData()
-//            
-//        }
+
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        DispatchQueue.main.async {
-            self.secondTV.beginUpdates()
-            self.heightSecondTV.constant = self.secondTV.contentSize.height
-            self.secondTV.setNeedsDisplay()
-            self.secondTV.endUpdates()
+    @IBAction func btnClicked(_ sender: UIButton) {
+        if self.count == 12 {
+            self.count = 5
+            print("set to 5")
+            
+            DispatchQueue.main.async {
+                self.secondTV.reloadData()
+                self.secondTV.setNeedsLayout()
+                self.secondTV.layoutIfNeeded()
+                self.secondTV.reloadData()
+            }
+            NotificationCenter.default.post(name: Notification.Name(rawValue: "ut"), object: nil)
+            
+        } else {
+            self.count = 12
+            print("set to 12")
+            DispatchQueue.main.async {
+                self.secondTV.reloadData()
+                self.secondTV.setNeedsLayout()
+                self.secondTV.layoutIfNeeded()
+                self.secondTV.reloadData()
+            }
+            NotificationCenter.default.post(name: Notification.Name(rawValue: "ut"), object: nil)
             
         }
-//        DispatchQueue.main.asyncAfter(deadline: .now()+2, execute: {
-//            print("after 2 seconds in FTVC")
+    }
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        print("layoutSubviews in Cell")
+        DispatchQueue.main.async {
+            
 //            self.secondTV.beginUpdates()
-//            self.heightSecondTV.constant = self.secondTV.contentSize.height
+            self.heightSecondTV.constant = self.secondTV.contentSize.height
 //            self.secondTV.setNeedsDisplay()
 //            self.secondTV.endUpdates()
-//
-//        })
+            
+        }
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -65,16 +77,19 @@ class FirstTableViewCell: UITableViewCell {
 
 extension FirstTableViewCell: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 12
+        return count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SecondTableViewCell", for:  indexPath) as! SecondTableViewCell
         cell.innerLbl.text = "\(indexPath.row)"
-        cell.setNeedsLayout()
-        cell.layoutIfNeeded()
+//        cell.setNeedsLayout()
+//        cell.layoutIfNeeded()
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "ut"), object: nil)
         return cell
     }
+    
+   
     
     
 }
