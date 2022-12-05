@@ -64,6 +64,7 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FirstTableViewCell", for:  indexPath) as! FirstTableViewCell
+        cell.firstLbl.text = "\(indexPath.row)"
 //        UIView.performWithoutAnimation { [weak self] in
 //            self?.firstTV.reloadRows(at: [indexPath], with: .none)
 //        }

@@ -9,10 +9,11 @@ import UIKit
 
 class FirstTableViewCell: UITableViewCell {
     
-    let vc = ViewController()
-    
+   
     @IBOutlet weak var secondTV: UITableView!
     @IBOutlet weak var heightSecondTV: NSLayoutConstraint!
+    @IBOutlet weak var firstLbl: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         //secondTV.dataSource = vc.self
